@@ -5,12 +5,7 @@ import { routes } from './routes'
 
 const app = express()
 
-const corsOptions = {
-    origin: "https://nlw-return-impulse-enryj8gwt-ticolls-profile.vercel.app",
-    optionsSuccessStatus: 200
-}
-
-app.use(cors(corsOptions))
+app.use(cors())
 app.use(express.json())
 app.use(routes)
 
