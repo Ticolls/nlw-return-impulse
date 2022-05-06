@@ -11,22 +11,18 @@ routes.post("/feedbacks", async (req, res) => {
 
     const { type, comment, screenshot } = req.body
 
+    console.log(type, comment, screenshot)
 
     const prismaFeedbacksRepository = new PrismaFeedbacksRepository()
     const nodemailerMailAdapter = new NodemailerMailAdapter()
 
     const submitFeedback = new SubmitFeedback(prismaFeedbacksRepository, nodemailerMailAdapter)
-    try {
-        await submitFeedback.execute({
-            type,
-            comment,
-            screenshot
-        })
-    } catch (err) {
-        console.error(err)
 
-        return res.status(500).send()
-    }
+    await submitFeedback.execute({
+        type,
+        comment,
+        screenshot
+    })
 
     return res.status(201).send()
 
