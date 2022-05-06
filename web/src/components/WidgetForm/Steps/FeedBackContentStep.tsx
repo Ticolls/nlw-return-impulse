@@ -29,12 +29,13 @@ export function FeedBackContentStep({
 
         setIsSendingFeedback(true)
 
-        await api.post('/feedbacks', {
+        const res = await api.post('/feedbacks', {
             type: feedBackType,
             comment,
             screenshot,
         })
 
+        console.log(res)
 
         setIsSendingFeedback(false)
         onFeedBackSent()
