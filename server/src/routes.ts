@@ -24,10 +24,8 @@ routes.post("/feedbacks", async (req, res) => {
         screenshot
     })
 
+    res.send("ta funcionando")
     return res.status(201).send()
-
-
-
 })
 
 
