@@ -29,3 +29,8 @@ routes.post("/feedbacks", async (req, res) => {
 
 
 })
+
+
+routes.get("/funciona", (req, res) => {
+    res.send({ message: "ta funcionando família!" })
+})
