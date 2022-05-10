@@ -1,5 +1,4 @@
 import express from 'express'
-import cors from 'cors'
 
 import { NodemailerMailAdapter } from './adapters/nodemailer/nodemailer-mail-adapter';
 import { SubmitFeedback } from './functions/submit-feedback';
