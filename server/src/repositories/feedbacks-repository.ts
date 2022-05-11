@@ -4,7 +4,6 @@ export interface FeedbackCreateData {
     screenshot?: string
 }
 
-
 export interface FeedbacksRepository {
     create: (data: FeedbackCreateData) => Promise<void>
 }
