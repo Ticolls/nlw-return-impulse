@@ -11,8 +11,6 @@ routes.post("/feedbacks", async (req, res) => {
 
     const { type, comment, screenshot } = req.body
 
-    console.log(type, comment, screenshot)
-
     const prismaFeedbacksRepository = new PrismaFeedbacksRepository()
     const nodemailerMailAdapter = new NodemailerMailAdapter()
 
@@ -26,9 +24,4 @@ routes.post("/feedbacks", async (req, res) => {
 
     res.send("ta funcionando")
     return res.status(201).send()
-})
-
-
-routes.get("/funciona", (req, res) => {
-    res.send({ message: "ta funcionando família!" })
 })

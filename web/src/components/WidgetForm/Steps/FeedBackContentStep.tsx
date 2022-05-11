@@ -35,8 +35,6 @@ export function FeedBackContentStep({
             screenshot,
         })
 
-        console.log(res)
-
         setIsSendingFeedback(false)
         onFeedBackSent()
 
