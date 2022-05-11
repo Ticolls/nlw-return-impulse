@@ -11,6 +11,8 @@ routes.post("/feedbacks", async (req, res) => {
 
     const { type, comment, screenshot } = req.body
 
+    console.log(type, comment, screenshot)
+
     const prismaFeedbacksRepository = new PrismaFeedbacksRepository()
     const nodemailerMailAdapter = new NodemailerMailAdapter()
 

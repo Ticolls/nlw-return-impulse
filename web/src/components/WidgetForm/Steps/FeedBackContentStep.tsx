@@ -37,7 +37,6 @@ export function FeedBackContentStep({
 
         console.log(res)
 
-
         setIsSendingFeedback(false)
         onFeedBackSent()
 
